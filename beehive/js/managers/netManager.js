@@ -30,8 +30,10 @@ class NetManager {
                     var bee = new Bee(user.id, user.name, user.username, user.email, user.address, 
                         user.isOwner, user.phone, user.website, user.company);
                 
-                    console.log(user);
+                    // console.log(user);
                 });
+
+                this.appManager.uiManager.showBees();
             }
         } else {
 

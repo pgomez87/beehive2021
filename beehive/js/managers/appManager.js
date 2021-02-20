@@ -7,5 +7,8 @@ class AppManager {
         this.uiManager = new UIManager(this);
 
         this.netManager.downloadData();
+
+        
+        
     }
 }

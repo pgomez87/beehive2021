@@ -1,0 +1,15 @@
+.loadingComponent{
+    position: absolute;
+    background-color: rgb(56, 71, 119);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loadingComponent_text{
+    color: whitesmoke;
+    font-size: 35px;
+}

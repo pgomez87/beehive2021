@@ -1,0 +1,37 @@
+:root {
+    --primary-color: #4F81FA;
+    --secondary-color: #f50057;
+    --website-color: #666D7D;
+    --text-color: #14203F;
+    --navbar-color: #FFFD44;
+    --navbar-height: 80px;
+}
+
+body, html {
+    overflow-x: none;
+    height: 100%;
+}
+
+* {
+    padding: 0; margin: 0; font-family: 'Poppins', sans-serif;}
+h1 { color: var(--primary-color)}
+h2 { color: var(--secondary-color)}
+
+button{
+    min-height: 60px;
+    border-style: none;
+    padding: 10px 10px 10px 10px;
+    margin: 5px 5px 5px 5px;
+    font-weight: bold;
+    color: white;
+    background-color: var(--secondary-color);
+    outline: none;
+}
+
+button:focus{
+    outline: none;
+}
+
+.hidden {
+    display: none !important;
+}
