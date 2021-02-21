@@ -7,8 +7,14 @@ class mainComponent extends Component {
     }
 
     showContent(){
-        this.content.style.height = (this.container.clientHeight - this.appManager.uiManager.navbarHeight) + 'px';
+        var height = (this.container.clientHeight - (this.appManager.uiManager.navbarHeight + 5)) + 'px';
+        this.content.style.height = height;
         this.beesComponent = new BeesComponent(this.content, 'beesComponent', this.appManager)
-        this.beesComponent = new BeesComponent(this.content, 'beesComponent', this.appManager)
+        // this.beesComponent2 = new BeesComponent(this.content, 'beesComponent', this.appManager)
+        // this.beesComponent3 = new BeesComponent(this.content, 'beesComponent', this.appManager)
+
+        // this.beesComponent.container.style.height = height;
+        // this.beesComponent2.container.style.height = height;
+        // this.beesComponent3.container.style.height = height;
     }
 }

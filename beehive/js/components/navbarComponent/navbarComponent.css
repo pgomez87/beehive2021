@@ -1,5 +1,5 @@
 .navbarComponent{
-    position: fixed;
+    position: absolute;
     background-color: var(--secondary-color);
     width: 100%;
     height: var(--navbar-height);
