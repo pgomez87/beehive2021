@@ -1,6 +1,20 @@
 .mainComponent{
-    position: absolute;
-    background-color: beige;
+    /* position: absolute; */
     width: 100vw;
     height: 100vh;
+    /* overflow: hidden; */
+}
+
+.mainComponent_content{
+    background-color: beige;
+    /* position: absolute; */
+    left: 0px;
+    top: var(--navbar-height);
+    width: 100%;
+    /* height: auto; */
+    margin-top: var(--navbar-height);
+
+    display: flex;
+    flex-direction: row;
+    
 }

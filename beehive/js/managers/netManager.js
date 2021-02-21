@@ -31,8 +31,9 @@ class NetManager {
                         user.isOwner, user.phone, user.website, user.company);
                 
                     // console.log(user);
+                    this.appManager.dataManager.bees.push(bee);
                 });
-
+                console.log(this.appManager.dataManager.bees);
                 this.appManager.uiManager.showBees();
             }
         } else {
