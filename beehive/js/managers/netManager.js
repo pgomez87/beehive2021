@@ -53,11 +53,11 @@ class NetManager {
     }
 
     parseBees(data){
-        data.forEach(user => {
-            var geo = new Geo(user.address.geo.lat, user.address.geo.lng);
-            var address = new Address(user.address.city, geo, user.address.street, user.address.suite, user.address.zipcode);
-            var company = new Company(user.company.bs, user.company.catchPhrase, user.company.name);                   
-            var bee = new Bee(user.id, user.name, user.username, user.email, address, user.isOwner, user.phone, user.website, company);
+        data.forEach(model => {
+            var geo = new Geo(model.address.geo.lat, model.address.geo.lng);
+            var address = new Address(model.address.city, geo, model.address.street, model.address.suite, model.address.zipcode);
+            var company = new Company(model.company.bs, model.company.catchPhrase, model.company.name);                   
+            var bee = new Bee(model.id, model.name, model.username, model.email, address, model.isOwner, model.phone, model.website, company);
             this.appManager.dataManager.bees.push(bee);
         });
         
@@ -98,21 +98,23 @@ class NetManager {
     }
 
     parsePhotos(data){
-        data.forEach(photo => {
-            // console.log(photo);
+        data.forEach(model => {
+            var photo = new Photo(model.id, model.albumId, model.title, model.thumbnailUrl, model.url);
+            this.addPhotoToBeeAlbum(photo);
         });
+
+        
         this.appManager.uiManager.showUI();
-        console.log(this.appManager.dataManager.bees);
+        // console.log(this.appManager.dataManager.bees);
     }
 
     
     addPostToBee(post) {
-        this.appManager.dataManager.bees.forEach(bee => {
-            if (bee.id === post.userId) {
+        var bee = this.getBeeById(post.userId);
+        if(bee){ {
                 bee.posts.push(post);
-                return;
             }
-        });
+        }
     }
 
     addCommentToPost(comment){
@@ -127,19 +129,40 @@ class NetManager {
     }
 
     addTodoToBee(todo){
-        this.appManager.dataManager.bees.forEach(bee => {
-            if(bee.id === todo.userId) {
+        var bee = this.getBeeById(todo.userId);
+        if(bee){
                 bee.todos.push(todo);
-            }
+        }
+    }
+    
+
+    addAlbumToBee(album){
+        var bee = this.getBeeById(album.userId);
+        if(bee){
+            bee.albums.push(album)
+        }
+    
+    }
+
+    addPhotoToBeeAlbum(photo){
+        this.appManager.dataManager.bees.forEach(bee => {
+            bee.albums.forEach(album => {
+                if(album.id === photo.albumId) {
+                    album.photos.push(photo);
+                }
+            });
         });
     }
 
-    addAlbumToBee(album){
-        this.appManager.dataManager.bees.forEach(bee => {
-            if(bee.id === album.userId) {
-                bee.albums.push(album);
+    getBeeById(id){
+        for (let i = 0; i < this.appManager.dataManager.bees.length; i++) {
+            if(this.appManager.dataManager.bees[i].id === id) {
+                return this.appManager.dataManager.bees[i];
             }
-        })
+            
+        }
+
+        return null;
     }
 
 }
