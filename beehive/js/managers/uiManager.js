@@ -9,7 +9,7 @@ class UIManager {
         this.loadingComponent = new LoadingComponent(document.body, 'loadingComponent', this.appManager)
     }
 
-    showBees(){
+    showUI(){
         this.loadingComponent.hide();
         this.mainComponent.showContent();
     }

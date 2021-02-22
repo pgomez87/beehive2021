@@ -9,9 +9,9 @@ class Bee {
         this.phone = phone;
         this.website = website;
         this.company = company;
-    //         this.post = [];
-    //         this.todos = [];
-    //         this.albums = [];
+        this.posts = [];
+        this.todos = [];
+        this.albums = [];
     }
 }
 
