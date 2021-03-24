@@ -36,12 +36,12 @@ class mainComponent extends Component {
     }
 
 
-    showFade() {
-            gsap.to(this.fade, ({ duration: 0.25, opacity: 0.75 });
-            }
+    // showFade() {
+    //     gsap.to(this.fade, ({ duration: 0.25, opacity: 0.75 });
+    //     }
 
-            hideFade() {
-                gsap.to(this.fade, ({ duration: 0.75, opacity: 0 });
-                }
+    //     hideFade() {
+    //         gsap.to(this.fade, ({ duration: 0.75, opacity: 0 })
 
-            }
+
+}
