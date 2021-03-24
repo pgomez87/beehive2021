@@ -1,11 +1,15 @@
-.beeComponent{
+.beeComponent {
     background-color: lightblue;
     width: 100%;
     height: 70px;
     margin: 5px 0px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-.beeComponent_name{
+.beeComponent_name {
     background-color: var(--primary-color);
     /* width: 100%; */
     height: 175px;
@@ -15,8 +19,17 @@
     flex-direction: row;
 }
 
+.beeComponent_avatar_container {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .beeComponent_info_container {
-    width: 85%;
+    width: 65%;
     height: 100%;
     padding: 0px 0px 0px 20px;
     display: flex;
@@ -26,11 +39,12 @@
 
 .beeComponent_buttons_container {
     width: 15%;
-    height: 100%;
-    /* padding: 0px 0px 0px 20px; */
+    height: 85%;
+    padding: 0px 20px 0px 0px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: flex-end;
 }
 
 .beeComponent_name {
@@ -38,6 +52,7 @@
     font-weight: bold;
     color: white;
     line-height: 1;
+    margin: 0px;
 }
 
 .beeComponent_email {
@@ -51,4 +66,34 @@
     font-size: 20px;
     line-height: 1;
     color: var(--website-color);
+}
+
+.beeComponent_avatar {
+    max-width: 120px;
+    height: auto;
+    border-radius: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: white;
+    margin-left: 10px;
+    object-fit: contain;
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+    .beeComponent_name {
+        font-size: 25px;
+    }
+    .beeComponent_email {
+        font-size: 13px;
+    }
+    .beeComponent_website {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+    .beeComponent_avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 60px;
+        margin-left: 20px;
+    }
 }

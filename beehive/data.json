@@ -1,11 +1,36 @@
 {
     "data": {
-        "users": [
+        "users": [{
+                "id": 11,
+                "name": "Carlos Gonzales",
+                "username": "Carl",
+                "email": "carlos10@gmail.com",
+                "avatar": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&crop=faces&fit=crop&h=200&w=200",
+                "address": {
+                    "street": "Los Almendros",
+                    "suite": "Apt. 221",
+                    "city": "San Ramón",
+                    "zipcode": "2998",
+                    "geo": {
+                        "lat": "-37.3159",
+                        "lng": "81.1496"
+                    }
+                },
+                "isOwner": true,
+                "phone": "1-506-8790-6732",
+                "website": "carlosact.org",
+                "company": {
+                    "name": "CG Craft",
+                    "catchPhrase": "Multi-layered client-server neural-net",
+                    "bs": "harness real-time e-markets"
+                }
+            },
             {
                 "id": 1,
                 "name": "Leanne Graham",
                 "username": "Bret",
                 "email": "Sincere@april.biz",
+                "avatar": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&crop=faces&fit=crop&h=200&w=200",
                 "address": {
                     "street": "Kulas Light",
                     "suite": "Apt. 556",
@@ -16,7 +41,7 @@
                         "lng": "81.1496"
                     }
                 },
-                "isOwner": true,
+                "isOwner": false,
                 "phone": "1-770-736-8031 x56442",
                 "website": "hildegard.org",
                 "company": {
@@ -30,6 +55,7 @@
                 "name": "Ervin Howell",
                 "username": "Antonette",
                 "email": "Shanna@melissa.tv",
+                "avatar": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&crop=faces&fit=crop&h=200&w=200",
                 "address": {
                     "street": "Victor Plains",
                     "suite": "Suite 879",
@@ -54,6 +80,7 @@
                 "name": "Clementine Bauch",
                 "username": "Samantha",
                 "email": "Nathan@yesenia.net",
+                "avatar": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&crop=faces&fit=crop&h=200&w=200",
                 "address": {
                     "street": "Douglas Extension",
                     "suite": "Suite 847",
@@ -78,6 +105,7 @@
                 "name": "Patricia Lebsack",
                 "username": "Karianne",
                 "email": "Julianne.OConner@kory.org",
+                "avatar": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&crop=faces&fit=crop&h=200&w=200",
                 "address": {
                     "street": "Hoeger Mall",
                     "suite": "Apt. 692",
@@ -102,6 +130,7 @@
                 "name": "Chelsey Dietrich",
                 "username": "Kamren",
                 "email": "Lucio_Hettinger@annie.ca",
+                "avatar": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&crop=faces&fit=crop&h=200&w=200",
                 "address": {
                     "street": "Skiles Walks",
                     "suite": "Suite 351",
@@ -126,6 +155,7 @@
                 "name": "Mrs. Dennis Schulist",
                 "username": "Leopoldo_Corkery",
                 "email": "Karley_Dach@jasper.info",
+                "avatar": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&crop=faces&fit=crop&h=200&w=200",
                 "address": {
                     "street": "Norberto Crossing",
                     "suite": "Apt. 950",
@@ -150,6 +180,7 @@
                 "name": "Kurtis Weissnat",
                 "username": "Elwyn.Skiles",
                 "email": "Telly.Hoeger@billy.biz",
+                "avatar": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&crop=faces&fit=crop&h=200&w=200",
                 "address": {
                     "street": "Rex Trail",
                     "suite": "Suite 280",
@@ -174,6 +205,7 @@
                 "name": "Nicholas Runolfsdottir V",
                 "username": "Maxime_Nienow",
                 "email": "Sherwood@rosamond.me",
+                "avatar": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&crop=faces&fit=crop&h=200&w=200",
                 "address": {
                     "street": "Ellsworth Summit",
                     "suite": "Suite 729",
@@ -198,6 +230,7 @@
                 "name": "Glenna Reichert",
                 "username": "Delphine",
                 "email": "Chaim_McDermott@dana.io",
+                "avatar": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&crop=faces&fit=crop&h=200&w=200",
                 "address": {
                     "street": "Dayna Park",
                     "suite": "Suite 449",
@@ -222,6 +255,7 @@
                 "name": "Clementina DuBuque",
                 "username": "Moriah.Stanton",
                 "email": "Rey.Padberg@karina.biz",
+                "avatar": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&crop=faces&fit=crop&h=200&w=200",
                 "address": {
                     "street": "Kattie Turnpike",
                     "suite": "Suite 198",
@@ -242,8 +276,7 @@
                 }
             }
         ],
-        "posts": [
-            {
+        "posts": [{
                 "userId": 1,
                 "id": 1,
                 "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
@@ -844,8 +877,7 @@
                 "body": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut"
             }
         ],
-        "comments": [
-            {
+        "comments": [{
                 "postId": 1,
                 "id": 1,
                 "name": "id labore ex et quam laborum",
@@ -4346,8 +4378,7 @@
                 "body": "perspiciatis quis doloremque\nveniam nisi eos velit sed\nid totam inventore voluptatem laborum et eveniet\naut aut aut maxime quia temporibus ut omnis"
             }
         ],
-        "albums": [
-            {
+        "albums": [{
                 "userId": 1,
                 "id": 1,
                 "title": "quidem molestiae enim"
@@ -4848,8 +4879,7 @@
                 "title": "enim repellat iste"
             }
         ],
-        "photos": [
-            {
+        "photos": [{
                 "albumId": 1,
                 "id": 1,
                 "title": "accusamus beatae ad facilis cum similique qui sunt",
@@ -39850,8 +39880,7 @@
                 "thumbnailUrl": "https://via.placeholder.com/150/6dd9cb"
             }
         ],
-        "todos": [
-            {
+        "todos": [{
                 "userId": 1,
                 "id": 1,
                 "title": "delectus aut autem",

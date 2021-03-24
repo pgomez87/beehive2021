@@ -5,74 +5,74 @@ class NetManager {
     }
 
 
-// USERS
+    // USERS
 
-    downloadData(endPoint, callback){
+    downloadData(endPoint, callback) {
         console.log("Downloading: ", endPoint);
         var request = new XMLHttpRequest();
-        var url = this.urlBase +  endPoint;
+        var url = this.urlBase + endPoint;
         request.onreadystatechange = this.onRequest.bind(this, callback);
         request.open('GET', url);
         request.send();
     }
 
-    onRequest(callback, e){
+    onRequest(callback, e) {
         var request = e.target;
-        if(request.readyState === 4) {
-            if(request.status === 200) {
+        if (request.readyState === 4) {
+            if (request.status === 200) {
                 var data = JSON.parse(request.response);
                 callback(data);
             } else {
                 console.error('Error on request', request.status);
             }
-        } 
+        }
     }
 
-    fetchBees(){
+    fetchBees() {
         this.downloadData('users.json', this.parseBees.bind(this));
     }
 
-    fetchPosts(){
+    fetchPosts() {
         this.downloadData('posts.json', this.parsePosts.bind(this));
     }
 
-    fetchComments(){
+    fetchComments() {
         this.downloadData('comments.json', this.parseComments.bind(this));
     }
 
-    fetchTodos(){
+    fetchTodos() {
         this.downloadData('todos.json', this.parseTodos.bind(this));
     }
 
-    fetchAlbums(){
+    fetchAlbums() {
         this.downloadData('albums.json', this.parseAlbums.bind(this));
     }
 
-    fetchPhotos(){
+    fetchPhotos() {
         this.downloadData('photos.json', this.parsePhotos.bind(this));
     }
 
-    parseBees(data){
+    parseBees(data) {
         data.forEach(model => {
             var geo = new Geo(model.address.geo.lat, model.address.geo.lng);
             var address = new Address(model.address.city, geo, model.address.street, model.address.suite, model.address.zipcode);
-            var company = new Company(model.company.bs, model.company.catchPhrase, model.company.name);                   
-            var bee = new Bee(model.id, model.name, model.username, model.email, address, model.isOwner, model.phone, model.website, company);
+            var company = new Company(model.company.bs, model.company.catchPhrase, model.company.name);
+            var bee = new Bee(model.id, model.name, model.username, model.email, address, model.isOwner, model.phone, model.website, company, model.avatar);
             this.appManager.dataManager.bees.push(bee);
         });
-        
+
         this.fetchPosts();
     }
-    
-    parsePosts(data){
+
+    parsePosts(data) {
         data.forEach(model => {
             var post = new Post(model.id, model.userId, model.title, model.body);
-            this.addPostToBee(post); 
+            this.addPostToBee(post);
         });
-        this.fetchComments(); 
+        this.fetchComments();
     }
-    
-    parseComments(data){
+
+    parseComments(data) {
         data.forEach(model => {
             var comment = new Comment(model.id, model.postId, model.name, model.body, model.email)
             this.addCommentToPost(comment);
@@ -80,8 +80,8 @@ class NetManager {
         });
         this.fetchTodos();
     }
-    
-    parseTodos(data){
+
+    parseTodos(data) {
         data.forEach(model => {
             var todo = new Todo(model.id, model.userId, model.title, model.completed);
             this.addTodoToBee(todo);
@@ -89,7 +89,7 @@ class NetManager {
         this.fetchAlbums();
     }
 
-    parseAlbums(data){
+    parseAlbums(data) {
         data.forEach(model => {
             var album = new Album(model.id, model.userId, model.title)
             this.addAlbumToBee(album);
@@ -97,30 +97,31 @@ class NetManager {
         this.fetchPhotos();
     }
 
-    parsePhotos(data){
+    parsePhotos(data) {
         data.forEach(model => {
             var photo = new Photo(model.id, model.albumId, model.title, model.thumbnailUrl, model.url);
             this.addPhotoToBeeAlbum(photo);
         });
 
-        
+
         this.appManager.uiManager.showUI();
         // console.log(this.appManager.dataManager.bees);
     }
 
-    
+
     addPostToBee(post) {
         var bee = this.getBeeById(post.userId);
-        if(bee){ {
+        if (bee) {
+            {
                 bee.posts.push(post);
             }
         }
     }
 
-    addCommentToPost(comment){
+    addCommentToPost(comment) {
         this.appManager.dataManager.bees.forEach(bee => {
             bee.posts.forEach(post => {
-                if(post.id === comment.postId) {
+                if (post.id === comment.postId) {
                     post.comments.push(comment);
                     return;
                 }
@@ -128,42 +129,41 @@ class NetManager {
         })
     }
 
-    addTodoToBee(todo){
+    addTodoToBee(todo) {
         var bee = this.getBeeById(todo.userId);
-        if(bee){
-                bee.todos.push(todo);
+        if (bee) {
+            bee.todos.push(todo);
         }
     }
-    
 
-    addAlbumToBee(album){
+
+    addAlbumToBee(album) {
         var bee = this.getBeeById(album.userId);
-        if(bee){
+        if (bee) {
             bee.albums.push(album)
         }
-    
+
     }
 
-    addPhotoToBeeAlbum(photo){
+    addPhotoToBeeAlbum(photo) {
         this.appManager.dataManager.bees.forEach(bee => {
             bee.albums.forEach(album => {
-                if(album.id === photo.albumId) {
+                if (album.id === photo.albumId) {
                     album.photos.push(photo);
                 }
             });
         });
     }
 
-    getBeeById(id){
+    getBeeById(id) {
         for (let i = 0; i < this.appManager.dataManager.bees.length; i++) {
-            if(this.appManager.dataManager.bees[i].id === id) {
+            if (this.appManager.dataManager.bees[i].id === id) {
                 return this.appManager.dataManager.bees[i];
             }
-            
+
         }
 
         return null;
     }
 
 }
-

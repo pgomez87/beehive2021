@@ -1,0 +1,13 @@
+.navbarButtonComponent {
+    /* position: relative; */
+    width: 40px;
+    height: 40px;
+}
+
+navbar.navbarButtonComponent_icon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}

@@ -1,5 +1,5 @@
 class Bee {
-    constructor(id, name, username, email, address, isOwner, phone, website, company) {
+    constructor(id, name, username, email, address, isOwner, phone, website, company, avatar) {
         this.id = id;
         this.name = name;
         this.username = username;
@@ -12,6 +12,6 @@ class Bee {
         this.posts = [];
         this.todos = [];
         this.albums = [];
+        this.avatar = avatar;
     }
 }
-

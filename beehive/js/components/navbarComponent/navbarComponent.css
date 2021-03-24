@@ -1,7 +1,27 @@
-.navbarComponent{
+.navbarComponent {
     position: absolute;
     background-color: var(--secondary-color);
     width: 100%;
     height: var(--navbar-height);
     top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbarComponent_title {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    line-height: 1;
+    margin: 0px;
+}
+
+.navbarComponent_backBtn_position {
+    margin: 0px 0px 0px 10px;
+}
+
+.navbarComponent_addBtn_position {
+    margin: 0px 10px 0px 0px;
 }
