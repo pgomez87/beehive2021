@@ -4,6 +4,7 @@ class PostListComponent extends Component {
         this.container.style.transform = 'translateX(' + window.innerWidth + ' px )';
         this.posts = [];
         this.newPostComponent = null;
+        this.hide();
     }
 
     showPostList(model) {

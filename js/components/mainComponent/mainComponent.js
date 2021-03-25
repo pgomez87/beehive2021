@@ -1,19 +1,20 @@
-class mainComponent extends Component {
+class MainComponent extends Component {
     constructor(parent, className, appManager) {
         super(parent, className, appManager);
         this.navbar = new NavbarComponent(this.container, 'navbarComponent', this.appManager)
-        this.content = div({ 'className': 'mainComponent_content' }, this.container, null)
+        this.content = div({ 'className': 'mainComponent_content' }, this.container)
         this.beesComponent = null;
-        this.fade = null;
+        // this.fade = null;
         this.postListComponent = null;
-        this.navbar.update();
+        // this.navbar.update();
     }
 
     showContent() {
         var height = (this.container.clientHeight - (this.appManager.uiManager.navbarHeight + 5)) + 'px';
         this.content.style.height = height;
         this.beesComponent = new BeesComponent(this.content, 'beesComponent', this.appManager)
-        this.fade = div({ 'className': 'mainComponent_fade' })
+        this.postListComponent = new PostListComponent(this.content, 'postListComponent', this.appManager);
+        // this.fade = div({ 'className': 'mainComponent_fade' })
 
         // this.beesComponent2 = new BeesComponent(this.content, 'beesComponent', this.appManager)
         // this.beesComponent3 = new BeesComponent(this.content, 'beesComponent', this.appManager)

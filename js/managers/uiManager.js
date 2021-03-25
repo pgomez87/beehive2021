@@ -22,15 +22,15 @@ class UIManager {
         this.mainComponent.showPostListComponent(model);
     }
 
-    showAlbumListComponent(model) {
-        this.mainComponent.showAlbumListComponent(model);
-    }
+    // showAlbumListComponent(model) {
+    //     this.mainComponent.showAlbumListComponent(model);
+    // }
 
-    showTodoListComponent(model) {
-        this.mainComponent.showTodoListComponent(model);
-    }
+    // showTodoListComponent(model) {
+    //     this.mainComponent.showTodoListComponent(model);
+    // }
 
-    showNewPostComponent() {
-        this.newPostComponent.showNewPostComponent();
-    }
+    // showNewPostComponent() {
+    //     this.newPostComponent.showNewPostComponent();
+    // }
 }

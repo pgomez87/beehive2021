@@ -1,6 +1,6 @@
 .navbarComponent {
     position: absolute;
-    background-color: var(--secondary-color);
+    background-color: var(--navbar-color-color);
     width: 100%;
     height: var(--navbar-height);
     top: 0px;
