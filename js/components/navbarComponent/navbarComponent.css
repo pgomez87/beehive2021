@@ -1,8 +1,8 @@
 .navbarComponent {
     position: absolute;
     background-color: var(--navbar-color-color);
-    width: 100%;
     height: var(--navbar-height);
+    width: 100%;
     top: 0px;
     display: flex;
     flex-direction: row;
@@ -19,9 +19,9 @@
 }
 
 .navbarComponent_backBtn_position {
-    margin: 0px 0px 0px 10px;
+    /* margin: 0px 0px 0px 10px; */
 }
 
 .navbarComponent_addBtn_position {
-    margin: 0px 10px 0px 0px;
+    /* margin: 0px 10px 0px 0px; */
 }

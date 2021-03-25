@@ -24,9 +24,9 @@ class BeeComponent extends Component {
 
         this.site = p({ 'innerHTML': this.model.website, 'className': 'beeComponent_website' }, this.infoContainer, null);
 
-        this.postsBtn = new BeeButtonComponent(this.buttonsContainer, '', this.appManager, this.onPostsBtn.bind(this), this.model.posts.length, 'postsIcon.png');
-        this.albumsBtn = new BeeButtonComponent(this.buttonsContainer, '', this.appManager, this.onAlbumsBtn.bin(this), this.model.albums.length, 'albumsIcon.png');
-        this.todosBtn = new BeeButtonComponent(this.buttonsContainer, '', this.appManager, this.onTodosBtn.bin(this), this.model.todos.length, 'todosIcon.png');
+        this.postsBtn = new BeeButtonComponent(this.buttonsContainer, '', this.appManager, this.onPostsBtn.bind(this), this.model.posts.length, 'postsIcon.svg');
+        this.albumsBtn = new BeeButtonComponent(this.buttonsContainer, '', this.appManager, this.onAlbumsBtn.bin(this), this.model.albums.length, 'albumsIcon.svg');
+        this.todosBtn = new BeeButtonComponent(this.buttonsContainer, '', this.appManager, this.onTodosBtn.bin(this), this.model.todos.length, 'todosIcon.svg');
     }
 
     onPostsBtn() {
