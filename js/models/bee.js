@@ -14,4 +14,8 @@ class Bee {
         this.albums = [];
         this.avatar = avatar;
     }
+
+    addPost(post) {
+        this.posts.unshift(post);
+    }
 }

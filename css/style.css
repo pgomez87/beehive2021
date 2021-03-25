@@ -6,6 +6,8 @@
     --navbar-color: #FFFD44;
     --navbar-height: 70px;
     --backgroud-color: white;
+    --continue-button-color: #4F81FA;
+    --cancel-button-color: #f50057;
 }
 
 body,
@@ -45,4 +47,14 @@ button:focus {
 
 .hidden {
     display: none !important;
+}
+
+.test {
+    color: chartreuse;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
 }

@@ -125,8 +125,8 @@ class NetManager {
                     post.comments.push(comment);
                     return;
                 }
-            })
-        })
+            });
+        });
     }
 
     addTodoToBee(todo) {
@@ -164,6 +164,13 @@ class NetManager {
         }
 
         return null;
+    }
+
+    addNewPost(post, model) {
+        // console.log(post)
+        model.addPost(post);
+        console.log(model);
+        this.appManager.uiManager.update.showPostListComponent(model);
     }
 
 }

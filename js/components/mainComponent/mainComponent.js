@@ -30,18 +30,39 @@ class mainComponent extends Component {
         this.showPostListComponent.moveOut();
     }
 
+
     showPostListComponent(model) {
-        console.log(model);
-        this.showPostListComponent.show();
+        this.showFade();
+        this.appManager.appState = this.appManager.appState_PostList;
+        this.postListComponent.showAlbumList(model);
+        this.navbar.update();
+    }
+
+    showAlbumListComponent(model) {
+        this.showFade();
+        this.appManager.appState = this.appManager.appState_AlbumList;
+        this.albumListComponent.showAlbumList(model);
+        this.navbar.update();
     }
 
 
-    // showFade() {
-    //     gsap.to(this.fade, ({ duration: 0.25, opacity: 0.75 });
-    //     }
+    showTodoListComponent(model) {
+        this.showFade();
+        this.appManager.appState = this.appManager.appState_TodoList;
+        this.todoListComponent.showTodoList(model);
+        this.navbar.update();
+    }
 
-    //     hideFade() {
-    //         gsap.to(this.fade, ({ duration: 0.75, opacity: 0 })
 
+    showFade() {
+        gsap.to(this.fade, { duration: 0.25, opacity: 0.75 });
+    }
 
+    hideFade() {
+        gsap.to(this.fade, { duration: 0.75, opacity: 0 })
+    }
+
+    showNewPostComponent() {
+        this.postListComponent.showNewPostComponent();
+    }
 }
