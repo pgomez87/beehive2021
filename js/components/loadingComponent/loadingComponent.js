@@ -6,7 +6,7 @@ class LoadingComponent extends Component {
     }
 
     hide() {
-        gsap.to(this.container, { duration: 0.3, opacity: 0, onComplete: this.onCompleteHide.bind(this) });
+        gsap.to(this.container, { delay: 0.25, duration: 0.5, opacity: 0, onComplete: this.onCompleteHide.bind(this) });
 
     }
 

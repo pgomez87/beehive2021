@@ -13,6 +13,6 @@ class AppManager {
         this.appState_AlbumList = 3;
         this.appState_TodoList = 4;
 
-        this.appState = this.appState; //2 for PostList, 3 for AlbumList
+        this.appState = this.appState_Bees;
     }
 }

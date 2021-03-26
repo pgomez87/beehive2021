@@ -1,10 +1,10 @@
 :root {
     --primary-color: #4F81FA;
     --secondary-color: #f50057;
-    --website-color: #666D7D;
-    --text-color: #14203F;
-    --navbar-color: #FFFD44;
     --navbar-height: 70px;
+    --navbar-color: #666D7D;
+    --text-color: #14203F;
+    --website-color: #FFFD44;
     --backgroud-color: white;
     --continue-button-color: #4F81FA;
     --cancel-button-color: #f50057;
