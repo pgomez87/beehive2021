@@ -5,8 +5,6 @@ class NetManager {
     }
 
 
-    // USERS
-
     downloadData(endPoint, callback) {
         console.log("Downloading: ", endPoint);
         var request = new XMLHttpRequest();
@@ -74,7 +72,7 @@ class NetManager {
 
     parseComments(data) {
         data.forEach(model => {
-            var comment = new Comment(model.id, model.postId, model.name, model.body, model.email)
+            var comment = new Comment(model.id, model.postId, model.name, model.body, model.beeId)
             this.addCommentToPost(comment);
             // console.log(comment);
         });
@@ -103,9 +101,9 @@ class NetManager {
             this.addPhotoToBeeAlbum(photo);
         });
 
+        console.log(this.appManager.dataManager.bees);
 
         this.appManager.uiManager.showUI();
-        // console.log(this.appManager.dataManager.bees);
     }
 
 
@@ -167,9 +165,7 @@ class NetManager {
     }
 
     addNewPost(post, model) {
-        // console.log(post)
         model.addPost(post);
-        console.log(model);
         this.appManager.uiManager.update.showPostListComponent(model);
     }
 

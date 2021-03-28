@@ -19,10 +19,10 @@ class Component {
 
 
     moveIn() {
-        gsap.to(this.container, { duration: 0.5, x: 0 });
+        gsap.to(this.container, { duration: 0.5, x: 0, ease: 'power2.inOut' });
     }
 
     moveOut() {
-        gsap.to(this.container, { duration: 0.25, x: window.innerWidth, onComplete: this.hide.bind(this) });
+        gsap.to(this.container, { duration: 0.25, x: window.innerWidth, onComplete: this.hide.bind(this), ease: 'power2.inOut' });
     }
 }

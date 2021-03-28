@@ -2,6 +2,7 @@
     position: relative;
     width: 40px;
     height: 40px;
+    cursor: pointer;
 }
 
 .beeButtonComponent_counter {
@@ -9,7 +10,7 @@
     width: 25px;
     background-color: tomato;
     color: white;
-    border-radius: 10px;
+    border-radius: 20px;
     border-width: 3px;
     border-color: white;
     border-style: solid;
@@ -22,8 +23,8 @@
 }
 
 .beeButtonComponent_icon {
-    height: 40px;
     width: 40px;
+    height: 40px;
     position: absolute;
     bottom: 0px;
     left: 0px;

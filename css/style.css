@@ -1,13 +1,17 @@
 :root {
-    --primary-color: #4F81FA;
-    --secondary-color: #f50057;
-    --navbar-height: 70px;
+    --primary-color: #95B3FC;
+    --secondary-color: #95B3FC;
+    --navbar-height: 80px;
     --navbar-color: #666D7D;
     --text-color: #14203F;
     --website-color: #FFFD44;
     --backgroud-color: white;
+    --post-container-color: #B9CDFD;
+    --post-add-comment-button: #4F81FA;
+    --comment-container-color: #DCE6FE;
     --continue-button-color: #4F81FA;
-    --cancel-button-color: #f50057;
+    --cancel-button-color: #666666;
+    --error-color: red;
 }
 
 body,
@@ -47,10 +51,6 @@ button:focus {
 
 .hidden {
     display: none !important;
-}
-
-.test {
-    color: chartreuse;
 }
 
 input:focus,

@@ -6,6 +6,8 @@ class MainComponent extends Component {
         this.beesComponent = null;
         this.fade = null;
         this.postListComponent = null;
+        this.albumListComponent = null;
+        this.todoListComponent = null;
         // this.navbar.update();
     }
 
@@ -19,22 +21,41 @@ class MainComponent extends Component {
         this.fade = div({ 'className': 'mainComponent_fade' }, this.content, null);
 
         this.postListComponent = new PostListComponent(this.content, 'postListComponent', this.appManager);
+
+        this.albumListComponent = new AlbumListComponent(this.content, 'albumListComponent', this.appManager);
+
+        this.todoListComponent = new TodoListComponent(this.content, 'todoListComponent', this.appManager);
+
+
+
+
         this.navbar.update();
-
-
-        // this.beesComponent2 = new BeesComponent(this.content, 'beesComponent', this.appManager)
-        // this.beesComponent3 = new BeesComponent(this.content, 'beesComponent', this.appManager)
-
-        // this.beesComponent.container.style.height = height;
-        // this.beesComponent2.container.style.height = height;
-        // this.beesComponent3.container.style.height = height;
     }
 
     showBeesComponent() {
         this.hideFade();
-        this.appManager.appState = this.appManager.appState_Bees;
         this.beesComponent.show();
-        this.postListComponent.moveOut();
+
+        switch (this.appManager.appState) {
+            case 1:
+
+                break;
+            case 2:
+                this.postListComponent.moveOut();
+                break;
+            case 3:
+                this.albumListComponent.moveOut();
+                break;
+            case 4:
+                this.todoListComponent.moveOut();
+                break;
+
+            default:
+                break;
+        }
+
+
+        this.appManager.appState = this.appManager.appState_Bees;
         this.navbar.update();
     }
 
@@ -42,24 +63,23 @@ class MainComponent extends Component {
         this.showFade();
         this.appManager.appState = this.appManager.appState_PostList;
         this.postListComponent.showPostList(model);
-        // this.postListComponent.showAlbumList(model);
+        this.navbar.update(model);
+    }
+
+    showAlbumListComponent(model) {
+        this.showFade();
+        this.appManager.appState = this.appManager.appState_AlbumList;
+        this.albumListComponent.showAlbumList(model);
         this.navbar.update();
     }
 
-    // showAlbumListComponent(model) {
-    //     this.showFade();
-    //     this.appManager.appState = this.appManager.appState_AlbumList;
-    //     this.albumListComponent.showAlbumList(model);
-    //     this.navbar.update();
-    // }
 
-
-    // showTodoListComponent(model) {
-    //     this.showFade();
-    //     this.appManager.appState = this.appManager.appState_TodoList;
-    //     this.todoListComponent.showTodoList(model);
-    //     this.navbar.update();
-    // }
+    showTodoListComponent(model) {
+        this.showFade();
+        this.appManager.appState = this.appManager.appState_TodoList;
+        this.todoListComponent.showTodoList(model);
+        this.navbar.update();
+    }
 
 
     showFade() {
@@ -70,7 +90,7 @@ class MainComponent extends Component {
         gsap.to(this.fade, { duration: 0.75, opacity: 0 });
     }
 
-    // showNewPostComponent() {
-    //     this.postListComponent.showNewPostComponent();
-    // }
+    showNewPostComponent() {
+        this.postListComponent.showNewPostComponent();
+    }
 }

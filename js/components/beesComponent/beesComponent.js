@@ -1,5 +1,5 @@
 class BeesComponent extends Component {
-    constructor(parent, className, appManager, model){
+    constructor(parent, className, appManager, model) {
         super(parent, className, appManager, model);
         this.addBees();
         // this.name = null;
@@ -10,7 +10,7 @@ class BeesComponent extends Component {
     addBees() {
         const bees = this.appManager.dataManager.bees;
         bees.forEach(model => {
-            const beeComponent = new BeeComponent(this.container, 'beeComponent', this.appManager)
+            const beeComponent = new BeeComponent(this.container, 'beeComponent', this.appManager, model)
         });
     }
 
@@ -23,5 +23,3 @@ class BeesComponent extends Component {
     //     this.site = p({'innerHTML' : this.model.website, 'className' : 'beeComponent_website'}, this.infoContainer, null);
     // }
 }
-
-

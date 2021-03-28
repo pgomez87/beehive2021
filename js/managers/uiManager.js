@@ -3,9 +3,11 @@ class UIManager {
         this.appManager = appManager;
 
         var style = getComputedStyle(document.body);
+
         this.navbarHeight = parseInt(style.getPropertyValue('--navbar-height'), 10);
 
         this.mainComponent = new MainComponent(document.body, 'mainComponent', this.appManager)
+
         this.loadingComponent = new LoadingComponent(document.body, 'loadingComponent', this.appManager)
     }
 
@@ -22,15 +24,15 @@ class UIManager {
         this.mainComponent.showPostListComponent(model);
     }
 
-    // showAlbumListComponent(model) {
-    //     this.mainComponent.showAlbumListComponent(model);
-    // }
+    showAlbumListComponent(model) {
+        this.mainComponent.showAlbumListComponent(model);
+    }
 
-    // showTodoListComponent(model) {
-    //     this.mainComponent.showTodoListComponent(model);
-    // }
+    showTodoListComponent(model) {
+        this.mainComponent.showTodoListComponent(model);
+    }
 
-    // showNewPostComponent() {
-    //     this.newPostComponent.showNewPostComponent();
-    // }
+    showNewPostComponent() {
+        this.mainComponent.showNewPostComponent();
+    }
 }

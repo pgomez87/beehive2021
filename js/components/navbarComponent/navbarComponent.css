@@ -1,27 +1,31 @@
 .navbarComponent {
     position: absolute;
-    background-color: var(--navbar-color-color);
+    background-color: var(--navbar-color);
     height: var(--navbar-height);
     width: 100%;
     top: 0px;
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
 }
 
 .navbarComponent_title {
     font-size: 40px;
     font-weight: bold;
     color: white;
-    line-height: 1;
+    line-height: 1.25;
     margin: 0px;
 }
 
 .navbarComponent_backBtn_position {
-    margin: 0px 0px 0px 10px;
+    position: absolute;
+    left: 0;
+    margin: 20px 0px 0px 20px;
 }
 
 .navbarComponent_addBtn_position {
-    margin: 0px 10px 0px 0px;
+    position: absolute;
+    right: 0;
+    margin: 20px 20px 0px 0px;
 }
