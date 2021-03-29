@@ -41,15 +41,15 @@ const img = function(attributes, parent, children) {
 const tag = function(tag, attributes, parent, children) {
     let e = document.createElement(tag);
 
-    if (parent !== null) {
+    if (parent != null) {
         parent.appendChild(e);
     }
 
-    // if (children !== null) {
-    //     children.forEach(child => {
-    //         e.appendChild(child);
-    //     });
-    // }
+    if (children != null) {
+        children.forEach(child => {
+            e.appendChild(child);
+        });
+    }
 
     for (const key in attributes) {
         e[key] = attributes[key];
