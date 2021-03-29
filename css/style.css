@@ -2,9 +2,9 @@
     --primary-color: #95B3FC;
     --secondary-color: #95B3FC;
     --navbar-height: 80px;
-    --navbar-color: #666D7D;
+    --navbar-color: rgb(36, 36, 36);
     --text-color: #14203F;
-    --website-color: #FFFD44;
+    --website-color: white;
     --backgroud-color: white;
     --post-container-color: #B9CDFD;
     --post-add-comment-button: #4F81FA;

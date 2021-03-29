@@ -61,14 +61,14 @@ class MainComponent extends Component {
     showPostListComponent(model) {
         this.showFade();
         this.appManager.appState = this.appManager.appState_PostList;
-        this.postListComponent.showPostList(model);
+        this.postListComponent.show(model);
         this.navbar.update(model);
     }
 
     showAlbumListComponent(model) {
         this.showFade();
         this.appManager.appState = this.appManager.appState_AlbumList;
-        this.albumListComponent.showAlbumList(model);
+        this.albumListComponent.show(model);
         this.navbar.update();
     }
 
@@ -76,7 +76,7 @@ class MainComponent extends Component {
     showTodoListComponent(model) {
         this.showFade();
         this.appManager.appState = this.appManager.appState_TodoList;
-        this.todoListComponent.showTodoList(model);
+        this.todoListComponent.show(model);
         this.navbar.update();
     }
 

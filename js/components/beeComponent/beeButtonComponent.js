@@ -11,13 +11,13 @@ class BeeButtonComponent extends Component {
         }
 
         this.counterContainer = div({ 'className': counterClass, 'innerHTML': this.counter }, this.container, null);
-        this.icon = img({ 'src': ('images/' + icon), 'className': 'beeButtonComponent_icon' },
-            this.container, null);
+        this.icon = img({ 'src': ('images/' + icon), 'className': 'beeButtonComponent_icon' }, this.container, null);
 
         this.container.onclick = this.onClick.bind(this);
     }
 
     onClick(e) {
+        console.log(e);
         this.callback();
     };
 

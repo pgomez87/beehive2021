@@ -7,13 +7,15 @@
 
 .beeButtonComponent_counter {
     height: 25px;
+    font-size: 12px;
+    align-items: center;
     width: 25px;
     background-color: tomato;
     color: white;
     border-radius: 20px;
-    border-width: 1px;
+    /* border-width: 1px;
     border-color: white;
-    border-style: solid;
+    border-style: solid; */
     position: relative;
     bottom: 10px;
     left: 20px;

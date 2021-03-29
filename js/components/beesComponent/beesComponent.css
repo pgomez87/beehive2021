@@ -1,5 +1,5 @@
 .beesComponent {
-    background-color: var(--background-color);
+    background-color: rgb(36, 36, 36);
     width: 100%;
     height: inherit;
     padding: 5px 5px 0px 5px;

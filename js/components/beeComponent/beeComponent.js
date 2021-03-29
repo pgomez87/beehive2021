@@ -28,6 +28,7 @@ class BeeComponent extends Component {
     }
 
     onPostsBtn() {
+        console.log(this.model)
         this.appManager.uiManager.showPostListComponent(this.model);
     }
 
