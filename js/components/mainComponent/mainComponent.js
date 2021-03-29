@@ -1,8 +1,8 @@
 class MainComponent extends Component {
     constructor(parent, className, appManager) {
         super(parent, className, appManager);
-        this.navbar = new NavbarComponent(this.container, 'navbarComponent', this.appManager)
-        this.content = div({ 'className': 'mainComponent_content' }, this.container)
+        this.navbar = new NavbarComponent(this.container, 'navbarComponent', this.appManager);
+        this.content = div({ 'className': 'mainComponent_content' }, this.container);
         this.beesComponent = null;
         this.fade = null;
         this.postListComponent = null;

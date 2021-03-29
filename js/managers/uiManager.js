@@ -6,7 +6,7 @@ class UIManager {
 
         this.navbarHeight = parseInt(style.getPropertyValue('--navbar-height'), 10);
 
-        this.mainComponent = new MainComponent(document.body, 'mainComponent', this.appManager)
+        this.mainComponent = new MainComponent(document.body, 'mainComponent', this.appManager);
 
         this.loadingComponent = new LoadingComponent(document.body, 'loadingComponent', this.appManager)
     }
