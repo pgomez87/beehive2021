@@ -2,10 +2,11 @@ class BeeButtonComponent extends Component {
     constructor(parent, className, appManager, callback, counter, icon) {
         super(parent, className, appManager);
         this.callback = callback;
-        this.counter = this.counter;
+        this.counter = counter;
 
-        var counterClass = 'beeButtonComponent_counter'
-        if (this.counterClass === 0) {
+        var counterClass = 'beeButtonComponent_counter';
+
+        if (this.counter === 0) {
             counterClass = 'beeButtonComponent_counter hidden'
         }
 

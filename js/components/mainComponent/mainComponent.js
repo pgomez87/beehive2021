@@ -8,7 +8,6 @@ class MainComponent extends Component {
         this.postListComponent = null;
         this.albumListComponent = null;
         this.todoListComponent = null;
-        // this.navbar.update();
     }
 
     showContent() {
