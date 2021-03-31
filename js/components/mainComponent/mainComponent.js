@@ -25,11 +25,10 @@ class MainComponent extends Component {
 
         this.todoListComponent = new TodoListComponent(this.content, 'todoListComponent', this.appManager);
 
-
-
-
         this.navbar.update();
+
     }
+
 
     showBeesComponent() {
         this.hideFade();
@@ -62,7 +61,7 @@ class MainComponent extends Component {
         this.showFade();
         this.appManager.appState = this.appManager.appState_PostList;
         this.postListComponent.show(model);
-        this.navbar.update(model);
+        this.navbar.update();
     }
 
     showAlbumListComponent(model) {

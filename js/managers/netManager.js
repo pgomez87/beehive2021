@@ -101,7 +101,7 @@ class NetManager {
             this.addPhotoToBeeAlbum(photo);
         });
 
-        console.log(this.appManager.dataManager.bees);
+        // console.log(this.appManager.dataManager.bees);
 
         this.appManager.uiManager.showUI();
     }
