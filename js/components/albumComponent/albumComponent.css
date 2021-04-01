@@ -1,4 +1,9 @@
-.albumComponent {}
+.albumComponent {
+
+    background-color: yellow;
+    height: auto;
+    margin-bottom: 5px;
+}
 
 .albumComponent_title {
     font-size: 35px;

@@ -25,7 +25,8 @@ class NavbarComponent extends Component {
     }
 
 
-    update() {
+    update(model) {
+        this.model = model;
         switch (this.appManager.appState) {
             case 1:
                 this.addBtn.hide();

@@ -1,6 +1,6 @@
 class PostComponent extends Component {
     constructor(parent, className, appManager, model) {
-        super(parent, className, appManagerm, model);
+        super(parent, className, appManager, model);
 
 
         this.title = p({ 'className': 'postComponent_title', 'innerHTML': this.model.title }, this.container, null);
