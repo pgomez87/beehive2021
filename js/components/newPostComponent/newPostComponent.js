@@ -13,9 +13,11 @@ class NewPostComponent extends Component {
         this.body = input({ 'classList': 'newPostComponent_body', 'placeholder': 'Body', 'onfocus': this.removeBodyError.bind(this) }, this.container, null);
         this.bodyError = p({ 'classList': 'newPostComponent_titleError', 'innerHTML': 'Please add a body for this post' }, this.container, null);
 
-        this.buttonsContainer = div({ 'classList': 'newPostComponent_buttons_container' }, this.container.null);
+        this.buttonsContainer = div({ 'classList': 'newPostComponent_buttons_container' }, this.container, null);
         this.continueBtn = div({ 'classList': 'newPostComponent_continue_btn', 'innerHTML': 'Continue', 'onclick': this.onContinue.bind(this) }, this.buttonsContainer, null);
         this.cancelBtn = div({ 'classList': 'newPostComponent_cancel_btn', 'innerHTML': 'Cancel', 'onclick': this.onCancel.bind(this) }, this.buttonsContainer, null);
+
+        console.log(this.buttonsContainer);
     }
 
 
