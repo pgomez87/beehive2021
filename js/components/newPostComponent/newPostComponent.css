@@ -87,15 +87,15 @@
     }
     
     .newPostComponent_titleError {
-        /* font: 12px;
+        font: 12px;
         color: var(--error-color);
         margin: -2px 0px 10px 5px;
         align-self: flex-start;
-        font-weight: bold; */
+        font-weight: bold;
     }
     
     .newPostComponent_inputError {
-        /* border-style: solid;
+        border-style: solid;
         border-color: var(--error-color);
-        border-width: 2px; */
+        border-width: 2px;
     }

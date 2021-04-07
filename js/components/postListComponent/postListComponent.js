@@ -7,6 +7,7 @@ class PostListComponent extends Component {
     }
 
     showPostList(model) {
+
         this.posts = [];
         this.container.innerHTML = '';
 
