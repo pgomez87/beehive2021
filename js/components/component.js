@@ -25,4 +25,8 @@ class Component {
     moveOut() {
         gsap.to(this.container, { duration: 0.25, x: window.innerWidth, onComplete: this.hide.bind(this), ease: 'power2.inOut' });
     }
+
+    clean() {
+
+    }
 }

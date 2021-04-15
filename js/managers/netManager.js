@@ -56,6 +56,8 @@ class NetManager {
             var address = new Address(model.address.city, geo, model.address.street, model.address.suite, model.address.zipcode);
             var company = new Company(model.company.bs, model.company.catchPhrase, model.company.name);
             var bee = new Bee(model.id, model.name, model.username, model.email, address, model.isOwner, model.phone, model.website, company, model.avatar);
+
+
             this.appManager.dataManager.bees.push(bee);
         });
 
@@ -167,6 +169,11 @@ class NetManager {
     addNewPost(post, model) {
         model.addPost(post);
         this.appManager.uiManager.update.showPostListComponent(model);
+    }
+
+    addNewComment(comment, postComponent) {
+        postComponent.model.addComment(comment);
+        postComponent.update();
     }
 
 }

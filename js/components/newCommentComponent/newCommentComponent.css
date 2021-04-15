@@ -1,10 +1,10 @@
 .newCommentComponent {
     /* position: absolute; */
-    background-color: var(--post-container-color);
+    background-color: var(--new-comment-container-color);
     width: calc(100% - 10px);
     height: auto;
     padding: 5px 0px 5px 0px;
-    margin: 0px 0px 5px 0px;
+    margin: 0px 0px 5px 5px;
     /* overflow: auto; */
     /* z-index: 20; */
     display: flex;

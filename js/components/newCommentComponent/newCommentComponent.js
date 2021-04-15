@@ -1,8 +1,10 @@
 class NewCommentComponent extends Component {
-    constructor(parent, className, appManager, model) {
+    constructor(parent, className, appManager, model, postComponent) {
         super(parent, className, appManager);
 
         this.model = model;
+
+        this.postComponent = postComponent;
 
         this.titleLabel = p({ 'classList': 'newCommentComponent_titleLabel', 'innerHTML': 'Title' }, this.container, null);
 
@@ -40,17 +42,23 @@ class NewCommentComponent extends Component {
         }
 
         if (title !== '' && body !== '') {
-            const post = new Post(-1, this.model.id, title, body)
-            this.appManager.netManager.addNewPost(post, this.model);
+            const owner = this.appManager.dataManager.getOwner();
+            const comment = new Comment(-1, this.model.id, title, body, owner.id);
+            // this.model.addComment()
+            // this.postComponent.update();
+            this.appManager.netManager.addNewComment(comment, this.postComponent);
+            this.onCancel();
         }
     }
 
     onCancel() {
-        this.hide();
+        this.clean();
+        this.postComponent.showAddCommentBtn();
         this.titleError.classList.add('hidden');
         this.title.classList.remove('newCommentComponent_inputError');
         this.bodyError.classList.add('hidden');
         this.body.classList.remove('newCommentComponent_inputError');
+        this.hide();
     }
 
     removeTitleError() {
@@ -61,6 +69,11 @@ class NewCommentComponent extends Component {
     removeBodyError() {
         this.bodyError.classList.add('hidden');
         this.body.classList.remove('newCommentComponent_inputError');
+    }
+
+    clean() {
+        this.title.value = '';
+        this.body.value = '';
     }
 
 }
