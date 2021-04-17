@@ -167,13 +167,45 @@ class NetManager {
     }
 
     addNewPost(post, model) {
-        model.addPost(post);
-        this.appManager.uiManager.update.showPostListComponent(model);
+
+        this.appManager.uiManager.showProcessing("Saving Comment");
+
+        window.setTimeout(() => {
+            var isOK = true;
+            if (isOK) {
+                this.appManager.uiManager.showProcessingOK("Complete Saving Comment");
+
+                model.addPost(post);
+                this.appManager.uiManager.update.showPostListComponent(model);
+
+            } else {
+                this.appManager.uiManager.showProcessingError("Error Saving Comment");
+            }
+        }, 2000)
+
+
+
     }
 
     addNewComment(comment, postComponent) {
-        postComponent.model.addComment(comment);
-        postComponent.update();
+
+        this.appManager.uiManager.showProcessing("Saving Comment");
+
+        window.setTimeout(() => {
+            var isOK = true;
+            if (isOK) {
+                this.appManager.uiManager.showProcessingOK("Complete Saving Comment");
+
+                postComponent.model.addComment(comment);
+                postComponent.update();
+
+            } else {
+                this.appManager.uiManager.showProcessingError("Error Saving Comment");
+            }
+        }, 2000)
+
+
+
     }
 
 }

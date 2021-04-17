@@ -14,6 +14,8 @@
     --cancel-button-color: #666666;
     --error-color: red;
     --thumbnail-color: #e6e6e6;
+    --ok-color: rgb(37, 131, 65);
+    --processing-color: rgb(14, 65, 204);
 }
 
 body,

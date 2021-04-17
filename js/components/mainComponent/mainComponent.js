@@ -8,6 +8,7 @@ class MainComponent extends Component {
         this.postListComponent = null;
         this.albumListComponent = null;
         this.todoListComponent = null;
+        this.progressComponent = null;
     }
 
     showContent() {
@@ -26,6 +27,8 @@ class MainComponent extends Component {
         this.todoListComponent = new TodoListComponent(this.content, 'todoListComponent', this.appManager);
 
         this.navbar.update(null);
+
+        this.progressComponent = new ProgressComponent(this.container, 'progressComponent', this.appManager);
 
     }
 
@@ -75,8 +78,8 @@ class MainComponent extends Component {
     showTodoListComponent(model) {
         this.showFade();
         this.appManager.appState = this.appManager.appState_TodoList;
-        this.todoListComponent.show(model);
-        this.navbar.update(model);
+        this.todoListComponent.showTodoList(model);
+        this.navbar.update();
     }
 
 
@@ -90,5 +93,17 @@ class MainComponent extends Component {
 
     showNewPostComponent() {
         this.postListComponent.showNewPostComponent();
+    }
+
+    showProcessing(text) {
+        this.progressComponent.showProcessing(text);
+    }
+
+    showProcessingOK(text) {
+        this.progressComponent.showProcessingOK(text);
+    }
+
+    showProcessingError(text) {
+        this.progressComponent.showProcessingError(text);
     }
 }
