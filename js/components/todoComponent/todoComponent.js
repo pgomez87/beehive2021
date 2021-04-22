@@ -3,12 +3,11 @@ class TodoComponent extends Component {
         super(parent, className, appManager, model);
 
         this.textContainer = div({ 'className': 'todoComponent_text_container' }, this.container, null)
-
-        this.title = p({ 'className': 'todoComponent_title', 'innerHTML': this.model.title }, this.container, null);
-        this.btn = div({ 'className': 'todoComponent_btn' }, this.container, null);
-
+        this.title = p({ 'className': 'todoComponent_title', 'innerHTML': this.model.title }, this.textContainer, null);
         const bee = this.appManager.dataManager.getBeeById(this.model.userId);
         this.email = p({ 'className': 'todoComponent_email', 'innerHTML': bee.email }, this.textContainer, null)
+
+        this.btn = div({ 'className': 'todoComponent_btn' }, this.container, null);
 
         this.completeIcon = img({ 'src': 'images/completeIcon.svg', 'className': 'todoComponent_complete_icon' }, this.btn, null);
 
