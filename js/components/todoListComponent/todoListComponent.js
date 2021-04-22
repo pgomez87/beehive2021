@@ -13,11 +13,11 @@ class TodoListComponent extends Component {
 
         this.container.scrollTop = 0;
         this.model = model;
-        // this.model.posts.forEach(post => {
-        //     console.log(post);
-        //     let postComponent = new postComponent(this.container, 'postComponent', this.appManager, post);
-        //     this.posts.push(postComponent);
-        // });
+
+        this.model.todos.forEach(todo => {
+            const todoComponent = new TodoComponent(this.container, 'todoComponent', this.appManager, todo);
+            this.todos.push(todoComponent)
+        });
     }
 
 }
