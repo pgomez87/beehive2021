@@ -176,7 +176,7 @@ class NetManager {
                 this.appManager.uiManager.showProcessingOK("Complete Saving Comment");
 
                 model.addPost(post);
-                this.appManager.uiManager.update.showPostListComponent(model);
+                this.appManager.uiManager.showPostListComponent(model);
 
             } else {
                 this.appManager.uiManager.showProcessingError("Error Saving Comment");
