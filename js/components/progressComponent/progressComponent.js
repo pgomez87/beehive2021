@@ -30,6 +30,7 @@ class ProgressComponent extends Component {
         this.textContainer.classList.remove('progressComponent_error');
         this.textContainer.classList.add('progressComponent_ok');
         this.textContainer.classList.remove('progressComponent_processing');
+        this.moveOut();
     }
 
 

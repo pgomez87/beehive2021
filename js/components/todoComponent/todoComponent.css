@@ -1,0 +1,63 @@
+.todoComponent {
+    background-color: var(--post-container-color);
+    width: calc(100% - 10px);
+    height: auto;
+    margin: 0px 0px 5px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.todoComponent_text_container {
+    width: 90%;
+    margin: 10px 10px 10px 10px;
+}
+
+.todoComponent_title {
+    font-size: 20px;
+    line-height: 1.25;
+    color: var(--text-color);
+    pointer-events: none;
+}
+
+.todoComponent_email {
+    font-size: 13px;
+    line-height: 1.25;
+    color: var(--processing-color);
+    pointer-events: none;
+}
+
+.todoComponent_btn {
+    width: 10%;
+    height: 40px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    pointer-events: none;
+}
+
+.todoComponent_complete_icon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    pointer-events: none;
+    color: green;
+}
+
+.todoComponent_notComplete_icon {
+    display: block;
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    pointer-events: none;
+    color: grey;
+}
