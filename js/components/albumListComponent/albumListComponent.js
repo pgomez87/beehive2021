@@ -1,7 +1,7 @@
 class AlbumListComponent extends Component {
     constructor(parent, className, appManager) {
         super(parent, className, appManager);
-        this.container.style.transform = 'translateX(' + window.innerWidth + ' px )';
+        this.container.style.transform = 'translateX(' + window.innerWidth + 'px)';
         this.albums = [];
     }
 
@@ -14,10 +14,9 @@ class AlbumListComponent extends Component {
         this.container.scrollTop = 0;
         this.model = model;
 
-
         this.model.albums.forEach(album => {
             let albumComponent = new AlbumComponent(this.container, 'albumComponent', this.appManager, album);
-            this.album.push(postComponent);
+            this.albums.push(albumComponent);
         });
     }
 

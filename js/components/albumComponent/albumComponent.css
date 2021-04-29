@@ -1,5 +1,62 @@
-.albumComponent {}
+.albumComponent {
+    background-color: var(--post-container-color);
+    width: calc(100% - 10px);
+    height: auto;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
 
 .albumComponent_title {
     font-size: 35px;
+    font-weight: bold;
+    color: var(--text-color);
+    line-height: 1.25;
+    margin: 20px 10px 10px 10px;
+    text-align: center;
+    user-select: none;
+    cursor: [pointer];
 }
+
+.albumComponent_thumbnailsContainer {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.albumComponent_down_icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    font-weight: 10px;
+}
+
+.albumComponent_up_icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+
+
+/* .albumComponent_thumbnail {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+} */

@@ -56,6 +56,8 @@ class NetManager {
             var address = new Address(model.address.city, geo, model.address.street, model.address.suite, model.address.zipcode);
             var company = new Company(model.company.bs, model.company.catchPhrase, model.company.name);
             var bee = new Bee(model.id, model.name, model.username, model.email, address, model.isOwner, model.phone, model.website, company, model.avatar);
+
+
             this.appManager.dataManager.bees.push(bee);
         });
 
@@ -101,7 +103,7 @@ class NetManager {
             this.addPhotoToBeeAlbum(photo);
         });
 
-        console.log(this.appManager.dataManager.bees);
+        // console.log(this.appManager.dataManager.bees);
 
         this.appManager.uiManager.showUI();
     }
@@ -165,8 +167,45 @@ class NetManager {
     }
 
     addNewPost(post, model) {
-        model.addPost(post);
-        this.appManager.uiManager.update.showPostListComponent(model);
+
+        this.appManager.uiManager.showProcessing("Saving Comment");
+
+        window.setTimeout(() => {
+            var isOK = true;
+            if (isOK) {
+                this.appManager.uiManager.showProcessingOK("Complete Saving Comment");
+
+                model.addPost(post);
+                this.appManager.uiManager.update.showPostListComponent(model);
+
+            } else {
+                this.appManager.uiManager.showProcessingError("Error Saving Comment");
+            }
+        }, 2000)
+
+
+
+    }
+
+    addNewComment(comment, postComponent) {
+
+        this.appManager.uiManager.showProcessing("Saving Comment");
+
+        window.setTimeout(() => {
+            var isOK = true;
+            if (isOK) {
+                this.appManager.uiManager.showProcessingOK("Complete Saving Comment");
+
+                postComponent.model.addComment(comment);
+                postComponent.update();
+
+            } else {
+                this.appManager.uiManager.showProcessingError("Error Saving Comment");
+            }
+        }, 2000)
+
+
+
     }
 
 }

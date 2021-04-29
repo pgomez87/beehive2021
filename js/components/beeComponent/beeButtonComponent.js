@@ -17,7 +17,7 @@ class BeeButtonComponent extends Component {
     }
 
     onClick(e) {
-        console.log(e);
+
         this.callback();
     };
 

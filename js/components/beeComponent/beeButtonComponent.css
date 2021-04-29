@@ -19,9 +19,9 @@
     position: relative;
     bottom: 10px;
     left: 20px;
-    z-index: 1;
     display: flex;
     justify-content: center;
+    z-index: 1;
 }
 
 .beeButtonComponent_icon {

@@ -1,0 +1,17 @@
+.thumbnailComponent {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background-color: var(--thumbnail-color);
+    cursor: pointer;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+}
+
+.thumbnailComponent_image {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+}

@@ -14,4 +14,15 @@ class DataManager {
         }
         return null;
     }
+
+    getOwner() {
+        for (let i = 0; i < this.bees.length; i++) {
+            const bee = this.bees[i];
+            if (bee.isOwner) {
+                return bee;
+            }
+        }
+        return null;
+    }
+
 }

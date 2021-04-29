@@ -35,4 +35,16 @@ class UIManager {
     showNewPostComponent() {
         this.mainComponent.showNewPostComponent();
     }
+
+    showProcessing(text) {
+        this.mainComponent.showProcessing(text);
+    }
+
+    showProcessingOK(text) {
+        this.mainComponent.showProcessingOK(text);
+    }
+
+    showProcessingError(text) {
+        this.mainComponent.showProcessingError(text);
+    }
 }

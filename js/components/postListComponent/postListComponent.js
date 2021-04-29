@@ -1,12 +1,13 @@
 class PostListComponent extends Component {
     constructor(parent, className, appManager) {
         super(parent, className, appManager);
-        this.container.style.transform = 'translateX(' + window.innerWidth + ' px )';
+        this.container.style.transform = 'translateX(' + window.innerWidth + 'px)';
         this.posts = [];
         this.newPostComponent = null;
     }
 
     showPostList(model) {
+
         this.posts = [];
         this.container.innerHTML = '';
 
@@ -14,7 +15,7 @@ class PostListComponent extends Component {
 
         this.newPostComponent = null;
         this.newPostComponent = new NewPostComponent(this.container, 'newPostComponent', this.appManager, model);
-        this.NewPostComponent.hide();
+        this.newPostComponent.hide();
 
         this.container.scrollTop = 0;
         this.model = model;

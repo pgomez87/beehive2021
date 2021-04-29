@@ -1,7 +1,7 @@
 class TodoListComponent extends Component {
     constructor(parent, className, appManager) {
         super(parent, className, appManager);
-        this.container.style.transform = 'translateX(' + window.innerWidth + ' px )';
+        this.container.style.transform = 'translateX(' + window.innerWidth + 'px )';
         this.todos = [];
     }
 
